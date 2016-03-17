@@ -99,6 +99,7 @@
     <Content Include="deps.js" />
     <Content Include="deps.lib.js" />
     <Content Include="example02\index.html" />
+    <Content Include="example03\index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -512,6 +513,8 @@
     <TypeScriptCompile Include="example01\app.tsx" />
     <TypeScriptCompile Include="example02\app.tsx" />
     <TypeScriptCompile Include="example02\HelloWorld.tsx" />
+    <TypeScriptCompile Include="example03\app.tsx" />
+    <TypeScriptCompile Include="example03\Counter.tsx" />
     <TypeScriptCompile Include="typings\browser.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react-dom\index.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react\index.d.ts" />
