@@ -96,6 +96,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="deps.js" />
+    <Content Include="deps.lib.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -210,6 +212,8 @@
     <Content Include="jspm_packages\system.js.map" />
     <Content Include="typings.json" />
     <Content Include="package.json" />
+    <Content Include="deps.js.map" />
+    <Content Include="deps.lib.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -503,6 +507,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="deps.tsx" />
     <TypeScriptCompile Include="example01\app.tsx" />
     <TypeScriptCompile Include="typings\browser.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react-dom\index.d.ts" />
