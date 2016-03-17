@@ -98,6 +98,7 @@
   <ItemGroup>
     <Content Include="deps.js" />
     <Content Include="deps.lib.js" />
+    <Content Include="example02\index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -509,6 +510,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="deps.tsx" />
     <TypeScriptCompile Include="example01\app.tsx" />
+    <TypeScriptCompile Include="example02\app.tsx" />
+    <TypeScriptCompile Include="example02\HelloWorld.tsx" />
     <TypeScriptCompile Include="typings\browser.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react-dom\index.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react\index.d.ts" />
