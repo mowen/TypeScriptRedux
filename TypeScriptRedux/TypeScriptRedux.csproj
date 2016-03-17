@@ -101,6 +101,7 @@
     <Content Include="example02\index.html" />
     <Content Include="example03\index.html" />
     <Content Include="example04\index.html" />
+    <Content Include="example05\index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -518,6 +519,8 @@
     <TypeScriptCompile Include="example03\Counter.tsx" />
     <TypeScriptCompile Include="example04\app.tsx" />
     <TypeScriptCompile Include="example04\Counter.tsx" />
+    <TypeScriptCompile Include="example05\app.tsx" />
+    <TypeScriptCompile Include="example05\Counter.tsx" />
     <TypeScriptCompile Include="typings\browser.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react-dom\index.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react\index.d.ts" />
