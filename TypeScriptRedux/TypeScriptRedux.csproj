@@ -100,6 +100,7 @@
     <Content Include="deps.lib.js" />
     <Content Include="example02\index.html" />
     <Content Include="example03\index.html" />
+    <Content Include="example04\index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -515,6 +516,8 @@
     <TypeScriptCompile Include="example02\HelloWorld.tsx" />
     <TypeScriptCompile Include="example03\app.tsx" />
     <TypeScriptCompile Include="example03\Counter.tsx" />
+    <TypeScriptCompile Include="example04\app.tsx" />
+    <TypeScriptCompile Include="example04\Counter.tsx" />
     <TypeScriptCompile Include="typings\browser.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react-dom\index.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react\index.d.ts" />
@@ -522,6 +525,7 @@
     <TypeScriptCompile Include="typings\main\ambient\react-dom\index.d.ts" />
     <TypeScriptCompile Include="typings\main\ambient\react\index.d.ts" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
