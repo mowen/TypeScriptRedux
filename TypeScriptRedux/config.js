@@ -8,6 +8,7 @@ System.config({
   },
 
   map: {
+    "es6-shim": "github:es-shims/es6-shim@0.35.0",
     "react": "npm:react@0.14.7",
     "react-dom": "npm:react-dom@0.14.7",
     "react-redux": "npm:react-redux@4.4.1",
