@@ -521,12 +521,16 @@
     <TypeScriptCompile Include="example03\Counter.tsx" />
     <TypeScriptCompile Include="example04\app.tsx" />
     <TypeScriptCompile Include="example04\Counter.tsx" />
+    <TypeScriptCompile Include="example07\ActionPlayer.tsx" />
     <TypeScriptCompile Include="example07\app.tsx" />
+    <TypeScriptCompile Include="example07\ColorPicker.tsx" />
     <TypeScriptCompile Include="example07\Counter.tsx" />
     <TypeScriptCompile Include="example06\app.tsx" />
     <TypeScriptCompile Include="example06\Counter.tsx" />
     <TypeScriptCompile Include="example05\app.tsx" />
     <TypeScriptCompile Include="example05\Counter.tsx" />
+    <TypeScriptCompile Include="example07\ShapeMaker.tsx" />
+    <TypeScriptCompile Include="example07\ShapeViewer.tsx" />
     <TypeScriptCompile Include="typings\browser.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react-dom\index.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react\index.d.ts" />
