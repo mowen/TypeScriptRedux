@@ -24,7 +24,7 @@ System.register(['react', 'react-redux', './ColorPicker'], function(exports_1, c
                 __extends(ShapeViewer, _super);
                 function ShapeViewer(props, context) {
                     _super.call(this, props, context);
-                    this.state({ isDragging: false });
+                    this.state = { isDragging: false };
                 }
                 ShapeViewer.prototype.render = function () {
                     var _this = this;

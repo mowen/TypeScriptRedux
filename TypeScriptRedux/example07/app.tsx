@@ -65,7 +65,7 @@ ReactDOM.render(
                         <ColorWrapper />
                     </td>
                     <td style={{ verticalAlign: "top", textAlign: "center", width: 500 }}>
-                        <hr>Preview</h2>
+                        <h2>Preview</h2>
                         <ShapeMaker />
                     </td>
                     <td style={{ verticalAlign: "bottom" }}>

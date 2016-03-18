@@ -5,7 +5,7 @@ import { isDark } from './ColorPicker';
 class ShapeViewer extends React.Component<any, any> {
     constructor(props?, context?) {
         super(props, context);
-        this.state({ isDragging: false });
+        this.state = { isDragging: false };
     }
 
     render() {

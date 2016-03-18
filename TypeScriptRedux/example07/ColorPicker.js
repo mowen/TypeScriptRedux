@@ -39,7 +39,7 @@ System.register(['react'], function(exports_1, context_1) {
                     var color = this.props.color;
                     var rgb = hexToRgb(color);
                     var textColor = isDark(color) ? '#fff' : '#000';
-                    return (React.createElement("div", null, React.createElement(NumberPicker, {name: "Red", value: "{rgb.r}", onChange: "{ n => this.updateRed(n) }"}), React.createElement(NumberPicker, {name: "Green", value: "{rgb.g}", onChange: "{ n => this.updateGreen(n) }"}), React.createElement(NumberPicker, {name: "Blue", value: "{rgb.b}", onChange: "{ n => this.updateBlue(n) }"}), React.createElement("div", {style: {
+                    return (React.createElement("div", null, React.createElement(NumberPicker, {name: "Red", value: rgb.r, onChange: "{ n => this.updateRed(n) }"}), React.createElement(NumberPicker, {name: "Green", value: rgb.g, onChange: "{ n => this.updateGreen(n) }"}), React.createElement(NumberPicker, {name: "Blue", value: rgb.b, onChange: "{ n => this.updateBlue(n) }"}), React.createElement("div", {style: {
                         background: color, width: "100%", height: 40, lineHeight: "40px",
                         textAlign: "center", color: textColor
                     }}, color)));
