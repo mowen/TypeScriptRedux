@@ -526,6 +526,7 @@
     <TypeScriptCompile Include="example08\ActionPlayer.tsx" />
     <TypeScriptCompile Include="example08\app.tsx" />
     <TypeScriptCompile Include="example08\ColorPicker.tsx" />
+    <TypeScriptCompile Include="example08\core.ts" />
     <TypeScriptCompile Include="example08\Counter.tsx" />
     <TypeScriptCompile Include="example08\reducers.ts" />
     <TypeScriptCompile Include="example08\ShapeMaker.tsx" />
