@@ -4,7 +4,7 @@ export class NumberPicker extends React.Component<any, any> {
     render() {
         return (
             <p>
-                <input type="range" value={this.props.value.toString() } min="0" max="25"
+                <input type="range" value={this.props.value.toString() } min="0" max="255"
                     onChange={e => this.handleChange(e) }/>
                 <label>{this.props.name}: </label>
                 <b>{ this.props.value }</b>
@@ -22,13 +22,13 @@ export class ColorPicker extends React.Component<any, any> {
     render() {
         const color = this.props.color;
         const rgb = hexToRgb(color);
-        const textColor = isDark(color) ? '#fff' : '#000';
+        const textColor = isDark(color) ? "#fff" : "#000";
 
         return (
             <div>
-                <NumberPicker name="Red" value={rgb.r} onChange="{ n => this.updateRed(n) }" />
-                <NumberPicker name="Green" value={rgb.g} onChange="{ n => this.updateGreen(n) }" />
-                <NumberPicker name="Blue" value={rgb.b} onChange="{ n => this.updateBlue(n) }" />
+                <NumberPicker name="Red" value={rgb.r} onChange={ n => this.updateRed(n) } />
+                <NumberPicker name="Green" value={rgb.g} onChange={ n => this.updateGreen(n) } />
+                <NumberPicker name="Blue" value={rgb.b} onChange={ n => this.updateBlue(n) } />
                 <div style={{
                     background: color, width: "100%", height: 40, lineHeight: "40px",
                     textAlign: "center", color: textColor

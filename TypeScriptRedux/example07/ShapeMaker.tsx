@@ -12,7 +12,7 @@ class ShapeMaker extends React.Component<any, any> {
         var width = this.props.width,
             height = this.props.height,
             background = this.props.color;
-        const color = isDark(background) ? '#fff' : '#000';
+        const color = isDark(background) ? "#fff" : "#000";
 
         return (
             <div>
@@ -20,15 +20,15 @@ class ShapeMaker extends React.Component<any, any> {
                     <label>size: </label>
                     <b>{height}x{width}</b>
                 </p>
-                <div style={{ height, width, background, color, lineHeight: height + 'px', margin: "auto" }}>
+                <div style={{ height, width, background, color, lineHeight: height + "px", margin: "auto" }}>
                     ({this.state.top},{this.state.left})
                 </div>
                 <div>
                     <p>
                         <label>position: </label>
-                        <input style={{ width: 30 }} defaultValue={this.props.top} onchange={ e => this.handleTop(e) } />
+                        <input style={{ width: 30 }} defaultValue={this.props.top} onChange={ e => this.handleTop(e) } />
                         <span>,</span>
-                        <input style={{ width: 30 }} defaultValue={this.props.left} onchange={ e => this.handleLeft(e) } />
+                        <input style={{ width: 30 }} defaultValue={this.props.left} onChange={ e => this.handleLeft(e) } />
                     </p>
 
                     <button onClick={ e => this.props.addShape(background, height, width, this.state.top, this.state.left) }>
@@ -41,12 +41,14 @@ class ShapeMaker extends React.Component<any, any> {
 
     handleTop(event) {
         var top = parseInt(event.target.value);
-        if (!isNaN(top)) this.setState({ top });
+        if (!isNaN(top))
+            this.setState({ top });
     }
 
     handleLeft(event) {
         var left = parseInt(event.target.value);
-        if (!isNaN(left)) this.setState({ left });        
+        if (!isNaN(left))
+            this.setState({ left });        
     }
 }
 
