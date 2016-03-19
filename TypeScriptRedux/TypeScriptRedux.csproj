@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptExperimentalDecorators>true</TypeScriptExperimentalDecorators>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -101,6 +102,7 @@
     <Content Include="example02\index.html" />
     <Content Include="example03\index.html" />
     <Content Include="example04\index.html" />
+    <Content Include="example08\index.html" />
     <Content Include="example07\index.html" />
     <Content Include="example06\index.html" />
     <Content Include="example05\index.html" />
@@ -521,6 +523,14 @@
     <TypeScriptCompile Include="example03\Counter.tsx" />
     <TypeScriptCompile Include="example04\app.tsx" />
     <TypeScriptCompile Include="example04\Counter.tsx" />
+    <TypeScriptCompile Include="example08\ActionPlayer.tsx" />
+    <TypeScriptCompile Include="example08\app.tsx" />
+    <TypeScriptCompile Include="example08\ColorPicker.tsx" />
+    <TypeScriptCompile Include="example08\Counter.tsx" />
+    <TypeScriptCompile Include="example08\reducers.ts" />
+    <TypeScriptCompile Include="example08\ShapeMaker.tsx" />
+    <TypeScriptCompile Include="example08\reducers\shapeReducers.ts" />
+    <TypeScriptCompile Include="example08\ShapeViewer.tsx" />
     <TypeScriptCompile Include="example07\ActionPlayer.tsx" />
     <TypeScriptCompile Include="example07\app.tsx" />
     <TypeScriptCompile Include="example07\ColorPicker.tsx" />
