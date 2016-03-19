@@ -212,7 +212,7 @@ _Pvt_Extensions/
 ModelManifest.xml
 
 # Project specific 
-TypeScriptRedux/example*/*.js
-TypeScriptRedux/example*/*.js.map
+TypeScriptRedux/example**/*.js
+TypeScriptRedux/example**/*.js.map
 
 jspm_packages/

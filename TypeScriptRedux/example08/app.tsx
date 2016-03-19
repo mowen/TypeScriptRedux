@@ -11,18 +11,37 @@ import ShapeMaker from "./ShapeMaker";
 import ShapeViewer from "./ShapeViewer";
 import { ColorPicker } from "./ColorPicker";
 
-import reducers from './reducers';
+import reducers from "./reducers";
+import History from "./History";
 
-var actions = [];
 var defaultState = { nextShapeId: 0, width: 100, height: 100, color: "#000000", shapes: [] };
+
+var history = {
+    states: [],
+    stateIndex: 0,
+
+    reset() {
+        this.states = [];
+        this.stateIndex = -1;
+    },
+    prev() { return this.states[--this.stateIndex]; },
+    next() { return this.states[++this.stateIndex]; },
+    goTo(index) { return this.states[this.stateIndex = index]; },
+    canPrev() { return this.stateIndex <= 0; },
+    canNext() { return this.stateIndex >= this.states.length - 1; },
+    pushState(nextState) {
+        this.states.push(nextState);
+        this.stateIndex = this.states.length - 1;
+    }
+}
 
 let store = createStore(
     (state, action) => {
         var reducer = reducers[action.type];
         var nextState = reducer != null ? reducer(state, action) : state;
 
-        if (action.type != 'LOAD')
-            history.add(action, state);
+        if (action.type !== "LOAD")
+            history.pushState(nextState);
 
         return nextState;
     },
@@ -56,8 +75,9 @@ ReactDOM.render(
                         <h2>Preview</h2>
                         <ShapeMaker />
                     </td>
-                    <td style={{ verticalAlign: "bottom" }}>
-                        <ActionPlayer store={store} actions={actions} defaultState={defaultState} />
+                    <td style={{ verticalAlign: "top" }}>
+                        <h2>History</h2>
+                        <History store={store} history={history} defaultState={defaultState} />
                     </td>
                 </tr>
                 <tr>

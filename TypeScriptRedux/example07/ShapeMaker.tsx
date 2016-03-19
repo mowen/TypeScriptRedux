@@ -26,9 +26,9 @@ class ShapeMaker extends React.Component<any, any> {
                 <div>
                     <p>
                         <label>position: </label>
-                        <input style={{ width: 30 }} defaultValue={this.props.top} onChange={ e => this.handleTop(e) } />
+                        <input style={{ width: 30 }} defaultValue={this.props.top} onChange={ this.handleTop } />
                         <span>,</span>
-                        <input style={{ width: 30 }} defaultValue={this.props.left} onChange={ e => this.handleLeft(e) } />
+                        <input style={{ width: 30 }} defaultValue={this.props.left} onChange={ this.handleLeft } />
                     </p>
 
                     <button onClick={ e => this.props.addShape(background, height, width, this.state.top, this.state.left) }>
@@ -39,13 +39,13 @@ class ShapeMaker extends React.Component<any, any> {
         );
     }
 
-    handleTop(event) {
+    handleTop = (event) => {
         var top = parseInt(event.target.value);
         if (!isNaN(top))
             this.setState({ top });
     }
 
-    handleLeft(event) {
+    handleLeft = (event) => {
         var left = parseInt(event.target.value);
         if (!isNaN(left))
             this.setState({ left });        
