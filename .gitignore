@@ -211,5 +211,8 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 
+# Project specific 
 TypeScriptRedux/example*/*.js
 TypeScriptRedux/example*/*.js.map
+
+jspm_packages/
