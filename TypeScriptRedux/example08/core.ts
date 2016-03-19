@@ -1,5 +1,7 @@
-﻿import { Store, Dispatch, ActionCreator } from "redux";
-import { Provider, connect } from "react-redux";
+﻿/// <reference path='../typings/browser.d.ts'/>
+
+import { Store, Dispatch, ActionCreator } from 'redux';
+import { Provider, connect } from 'react-redux';
 
 export interface IMapStateToProps {
     (state: any, ownProps?: any): any;
@@ -20,18 +22,19 @@ export function reduxify(mapStateToProps?: IMapStateToProps, mapDispatchToProps?
 export function subscribeToStore() {
     return target => {
         var didMount = target.prototype.componentDidMount;
-        target.prototype.componentDidMount = function() {
+        target.prototype.componentDidMount = function () {
             if (didMount != null)
                 didMount.call(this);
             this.unsubscribe = this.props.store.subscribe(() => this.forceUpdate());
         };
 
         var willUnmount = target.prototype.componentWillUnmount;
-        target.prototype.componentWillUnmount = function() {
+        target.prototype.componentWillUnmount = function () {
             if (willUnmount != null)
                 willUnmount.call(this);
+
             this.unsubscribe();
-        };
+        }
     }
 }
 
@@ -40,7 +43,7 @@ export function bindAll() {
         function F() {
             for (let k in target.prototype) {
                 const fn = target.prototype[k];
-                if (typeof fn !== "function" || target.prototype.hasOwnProperty(k))
+                if (typeof fn !== 'function' || !target.prototype.hasOwnProperty(k))
                     continue;
                 this[k] = fn.bind(this);
             }
@@ -48,8 +51,8 @@ export function bindAll() {
         }
         F.prototype = target.prototype;
 
-        var a = target; // Hack to get around TypeScript build error
+        var a = target; //Hack to get araound TypeScript build error
         a = F;
         return a;
-    }
+    };
 }

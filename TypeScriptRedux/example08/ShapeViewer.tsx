@@ -18,7 +18,7 @@ class ShapeViewer extends React.Component<any, any> {
                         background: s.color, width: s.width, height: s.height,
                         lineHeight: s.height + 'px', textAlign: "center", cursor: 'move'
                     }}
-                        onMouseDown={e => this.handleDragInit(e) }
+                        onMouseDown={this.handleDragInit}
                         onMouseUp={e => this.setState({ isDragging: false }) }
                         onMouseOut={e => this.setState({ isDragging: false }) }
                         onMouseMove={e => this.handleDrag(s.id, s.height, s.width, e) }>
@@ -29,9 +29,10 @@ class ShapeViewer extends React.Component<any, any> {
         );
     }
 
-    handleDragInit(event) {
-        var el = event.target.HTMLElement;
-        while (el.nodeName != 'DIV') el = el.parentNode as HTMLElement; // Don't select text SPAN node 
+    handleDragInit = (event) => {
+        var el = event.target as HTMLElement;
+        while (el.nodeName != 'DIV')
+            el = el.parentNode as HTMLElement; // Don't select text SPAN node 
         var top = parseInt(el.style.top) || 0;
         var left = parseInt(el.style.left) || 0;
         this.setState({ isDragging: true, orig: { x: event.pageX - left, y: event.pageY - top } });
