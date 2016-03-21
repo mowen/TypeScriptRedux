@@ -1,8 +1,17 @@
-﻿import * as React from 'react';
-import { connect } from 'react-redux';
-import { isDark } from './ColorPicker';
+﻿/// <reference path='../typings/browser.d.ts'/>
 
-class ShapeViewer extends React.Component<any, any> {
+import * as React from "react";
+import { connect } from "react-redux";
+import { isDark } from "./ColorPicker";
+import { reduxify } from "./core";
+
+@reduxify(
+    (state) => ({ shapes: state.shapes }),
+    (dispatch) => ({
+        updateShape: (id, top, left) => dispatch({ type: 'SHAPE_CHANGE', id, top, left })
+    })
+)
+export default class ShapeViewer extends React.Component<any, any> {
     constructor(props?, context?) {
         super(props, context);
         this.state = { isDragging: false };
@@ -44,10 +53,3 @@ class ShapeViewer extends React.Component<any, any> {
         }
     }
 }
-
-export default connect(
-    (state) => ({ shapes: state.shapes }),
-    (dispatch) => ({
-        updateShape: (id, top, left) => dispatch({ type: 'SHAPE_CHANGE', id, top, left })
-    })
-)(ShapeViewer);

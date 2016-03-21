@@ -1,8 +1,22 @@
-﻿import * as React from 'react';
-import { connect } from 'react-redux';
-import { isDark } from './ColorPicker';
+﻿/// <reference path='../typings/browser.d.ts'/>
 
-class ShapeMaker extends React.Component<any, any> {
+import * as React from "react";
+import { connect } from "react-redux";
+import { isDark } from "./ColorPicker";
+import { reduxify } from "./core";
+
+@reduxify(
+    (state) => ({
+        width: state.width, height: state.height, color: state.color,
+        top: state.nextShapeId * 10, left: state.nextShapeId * 10
+    }),
+    (dispatch) => ({
+        addShape: (color, height, width, top, left) => {
+            dispatch({ type: 'SHAPE_ADD', height, width, color, top, left });
+        }
+    })
+)
+export default class ShapeMaker extends React.Component<any, any> {
     constructor(props?, context?) {
         super(props, context);
         this.state = { top: props.top, left: props.left };
@@ -51,15 +65,3 @@ class ShapeMaker extends React.Component<any, any> {
             this.setState({ left });        
     }
 }
-
-export default connect(
-    (state) => ({
-        width: state.width, height: state.height, color: state.color,
-        top: state.nextShapeId * 10, left: state.nextShapeId * 10
-    }),
-    (dispatch) => ({
-      addShape: (color, height, width, top, left) => {
-          dispatch({ type: 'SHAPE_ADD', height, width, color, top, left });
-      }  
-    })
-)(ShapeMaker);

@@ -9,10 +9,11 @@ import Counter from "./Counter";
 import ActionPlayer from "./ActionPlayer";
 import ShapeMaker from "./ShapeMaker";
 import ShapeViewer from "./ShapeViewer";
+import History from "./History";
 import { ColorPicker } from "./ColorPicker";
 
 import reducers from "./reducers";
-import History from "./History";
+import { reduxify } from "./core";
 
 var defaultState = { nextShapeId: 0, width: 100, height: 100, color: "#000000", shapes: [] };
 
@@ -48,18 +49,15 @@ let store = createStore(
     defaultState
 );
 
-class ColorWrapperBase extends React.Component<any, any> {
+@reduxify(
+    (state) => ({ color: state.color }),
+    (dispatch) => ({ setColor: (color) => dispatch({ type: "COLOR_CHANGE", color }) })
+)
+class ColorWrapper extends React.Component<any, any> {
     render() {
         return <ColorPicker color={this.props.color} onChange={this.props.setColor} />;
     }
 }
-
-const ColorWrapper = connect(
-    (state) => ({ color: state.color }),
-    (dispatch) => ({
-         setColor: (color) => dispatch({ type: "COLOR_CHANGE", color })
-    })
-)(ColorWrapperBase);
 
 ReactDOM.render(
     <Provider store={store}>
