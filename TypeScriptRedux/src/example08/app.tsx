@@ -79,7 +79,7 @@ ReactDOM.render(
                     </td>
                 </tr>
                 <tr>
-                    <td colSpan="3">
+                    <td colSpan={3}>
                         <h2 style={{ margin: 5, textAlign: "center" }}>Shapes</h2>
                         <ShapeViewer />
                     </td>
