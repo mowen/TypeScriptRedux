@@ -214,5 +214,7 @@ ModelManifest.xml
 # Project specific 
 TypeScriptRedux/example**/*.js
 TypeScriptRedux/example**/*.js.map
+TypeScriptRedux/*.js
+TypeScriptRedux/*.js.map
 
 jspm_packages/

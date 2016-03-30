@@ -1,7 +1,7 @@
 ﻿/// <reference path='../typings/browser.d.ts'/>
 
-import { Store } from "redux";
-import { Provider, connect } from "react-redux";
+import { Store } from 'redux';
+import { Provider, connect } from 'react-redux';
 
 import Dispatch = Redux.Dispatch;
 import ActionCreator = Redux.ActionCreator;
@@ -18,7 +18,8 @@ export interface MapDispatchToPropsObject {
     [name: string]: ActionCreator;
 }
 
-export function reduxify(mapStateToProps?: MapStateToProps, mapDispatchToProps?: MapDispatchToPropsFunction | MapDispatchToPropsObject) {
+export function reduxify(mapStateToProps?: MapStateToProps,
+    mapDispatchToProps?: MapDispatchToPropsFunction | MapDispatchToPropsObject) {
     return target => connect(mapStateToProps, mapDispatchToProps)(target);
 }
 

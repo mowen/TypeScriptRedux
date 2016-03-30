@@ -1,4 +1,6 @@
-﻿import * as React from 'react';
+﻿/// <reference path='./typings/browser.d.ts'/>
+
+import * as React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { connect } from 'react-redux';
