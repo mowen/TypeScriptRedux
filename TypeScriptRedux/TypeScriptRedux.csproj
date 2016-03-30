@@ -97,20 +97,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="deps.js" />
     <Content Include="deps.lib.js" />
-    <Content Include="example02\index.html" />
-    <Content Include="example03\index.html" />
-    <Content Include="example04\index.html" />
-    <Content Include="example07\index.html" />
-    <Content Include="example06\index.html" />
-    <Content Include="example05\index.html" />
-    <Content Include="example08\index.html" />
-    <Content Include="example08\shapeReducers.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="src\example01\index.html" />
+    <Content Include="src\example02\index.html" />
+    <Content Include="src\example03\index.html" />
+    <Content Include="src\example04\index.html" />
+    <Content Include="src\example05\index.html" />
+    <Content Include="src\example06\index.html" />
+    <Content Include="src\example07\index.html" />
+    <Content Include="src\example08\index.html" />
+    <Content Include="src\example08\shapeReducers.js" />
     <Content Include="tsconfig.json" />
     <Content Include="jspm_packages\.dependencies.json" />
     <Content Include="jspm_packages\.loaderversions" />
@@ -221,16 +221,35 @@
     <Content Include="jspm_packages\system.js.map" />
     <Content Include="typings.json" />
     <Content Include="package.json" />
-    <Content Include="deps.js.map" />
     <Content Include="deps.lib.js.map" />
-    <Content Include="example08\ActionPlayer.js.map" />
-    <Content Include="example08\app.js.map" />
-    <Content Include="example08\ColorPicker.js.map" />
-    <Content Include="example08\Counter.js.map" />
-    <Content Include="example08\reducers.js.map" />
-    <Content Include="example08\ShapeMaker.js.map" />
-    <Content Include="example08\shapeReducers.js.map" />
-    <Content Include="example08\ShapeViewer.js.map" />
+    <Content Include="src\example01\app.js.map" />
+    <Content Include="src\example02\app.js.map" />
+    <Content Include="src\example02\HelloWorld.js.map" />
+    <Content Include="src\example03\app.js.map" />
+    <Content Include="src\example03\Counter.js.map" />
+    <Content Include="src\example04\app.js.map" />
+    <Content Include="src\example04\Counter.js.map" />
+    <Content Include="src\example05\app.js.map" />
+    <Content Include="src\example05\Counter.js.map" />
+    <Content Include="src\example06\app.js.map" />
+    <Content Include="src\example06\Counter.js.map" />
+    <Content Include="src\example07\ActionPlayer.js.map" />
+    <Content Include="src\example07\app.js.map" />
+    <Content Include="src\example07\ColorPicker.js.map" />
+    <Content Include="src\example07\Counter.js.map" />
+    <Content Include="src\example07\ShapeMaker.js.map" />
+    <Content Include="src\example07\ShapeViewer.js.map" />
+    <Content Include="src\example08\ActionPlayer.js.map" />
+    <Content Include="src\example08\app.js.map" />
+    <Content Include="src\example08\ColorPicker.js.map" />
+    <Content Include="src\example08\core.js.map" />
+    <Content Include="src\example08\Counter.js.map" />
+    <Content Include="src\example08\History.js.map" />
+    <Content Include="src\example08\reducers.js.map" />
+    <Content Include="src\example08\reducers\shapeReducers.js.map" />
+    <Content Include="src\example08\ShapeMaker.js.map" />
+    <Content Include="src\example08\shapeReducers.js.map" />
+    <Content Include="src\example08\ShapeViewer.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -240,7 +259,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.js" />
-    <Content Include="example01\index.html" />
     <Content Include="jspm_packages\github\jspm\nodelibs-assert%400.1.0.js" />
     <Content Include="jspm_packages\github\jspm\nodelibs-assert%400.1.0\index.js" />
     <Content Include="jspm_packages\github\jspm\nodelibs-process%400.1.2.js" />
@@ -524,34 +542,34 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="deps.tsx" />
-    <TypeScriptCompile Include="example01\app.tsx" />
-    <TypeScriptCompile Include="example02\app.tsx" />
-    <TypeScriptCompile Include="example02\HelloWorld.tsx" />
-    <TypeScriptCompile Include="example03\app.tsx" />
-    <TypeScriptCompile Include="example03\Counter.tsx" />
-    <TypeScriptCompile Include="example04\app.tsx" />
-    <TypeScriptCompile Include="example04\Counter.tsx" />
-    <TypeScriptCompile Include="example07\ActionPlayer.tsx" />
-    <TypeScriptCompile Include="example07\app.tsx" />
-    <TypeScriptCompile Include="example07\ColorPicker.tsx" />
-    <TypeScriptCompile Include="example07\Counter.tsx" />
-    <TypeScriptCompile Include="example06\app.tsx" />
-    <TypeScriptCompile Include="example06\Counter.tsx" />
-    <TypeScriptCompile Include="example05\app.tsx" />
-    <TypeScriptCompile Include="example05\Counter.tsx" />
-    <TypeScriptCompile Include="example07\ShapeMaker.tsx" />
-    <TypeScriptCompile Include="example07\ShapeViewer.tsx" />
-    <TypeScriptCompile Include="example08\ActionPlayer.tsx" />
-    <TypeScriptCompile Include="example08\app.tsx" />
-    <TypeScriptCompile Include="example08\ColorPicker.tsx" />
-    <TypeScriptCompile Include="example08\core.ts" />
-    <TypeScriptCompile Include="example08\Counter.tsx" />
-    <TypeScriptCompile Include="example08\History.tsx" />
-    <TypeScriptCompile Include="example08\reducers.ts" />
-    <TypeScriptCompile Include="example08\reducers\shapeReducers.ts" />
-    <TypeScriptCompile Include="example08\ShapeMaker.tsx" />
-    <TypeScriptCompile Include="example08\ShapeViewer.tsx" />
+    <TypeScriptCompile Include="src\deps.tsx" />
+    <TypeScriptCompile Include="src\example01\app.tsx" />
+    <TypeScriptCompile Include="src\example02\app.tsx" />
+    <TypeScriptCompile Include="src\example02\HelloWorld.tsx" />
+    <TypeScriptCompile Include="src\example03\app.tsx" />
+    <TypeScriptCompile Include="src\example03\Counter.tsx" />
+    <TypeScriptCompile Include="src\example04\app.tsx" />
+    <TypeScriptCompile Include="src\example04\Counter.tsx" />
+    <TypeScriptCompile Include="src\example05\app.tsx" />
+    <TypeScriptCompile Include="src\example05\Counter.tsx" />
+    <TypeScriptCompile Include="src\example06\app.tsx" />
+    <TypeScriptCompile Include="src\example06\Counter.tsx" />
+    <TypeScriptCompile Include="src\example07\ActionPlayer.tsx" />
+    <TypeScriptCompile Include="src\example07\app.tsx" />
+    <TypeScriptCompile Include="src\example07\ColorPicker.tsx" />
+    <TypeScriptCompile Include="src\example07\Counter.tsx" />
+    <TypeScriptCompile Include="src\example07\ShapeMaker.tsx" />
+    <TypeScriptCompile Include="src\example07\ShapeViewer.tsx" />
+    <TypeScriptCompile Include="src\example08\ActionPlayer.tsx" />
+    <TypeScriptCompile Include="src\example08\app.tsx" />
+    <TypeScriptCompile Include="src\example08\ColorPicker.tsx" />
+    <TypeScriptCompile Include="src\example08\core.ts" />
+    <TypeScriptCompile Include="src\example08\Counter.tsx" />
+    <TypeScriptCompile Include="src\example08\History.tsx" />
+    <TypeScriptCompile Include="src\example08\reducers.ts" />
+    <TypeScriptCompile Include="src\example08\reducers\shapeReducers.ts" />
+    <TypeScriptCompile Include="src\example08\ShapeMaker.tsx" />
+    <TypeScriptCompile Include="src\example08\ShapeViewer.tsx" />
     <TypeScriptCompile Include="typings\browser.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\es6-shim\index.d.ts" />
     <TypeScriptCompile Include="typings\browser\ambient\react-dom\index.d.ts" />
